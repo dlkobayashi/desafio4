@@ -1,0 +1,44 @@
+start_test_server_in_background
+touch("* id:'cadastrar'")
+keyboard_enter_text modelo
+keyboard_enter_text opa
+touch("* id:'modelo'")
+keyboard_enter_text opa
+keyboard_enter_text hdd2222
+hide_soft_keyboard
+touch("* id:'cadastrar'")
+exit
+reinstall_apps
+start_test_server_in_background
+query("*")
+exit
+start_test_server_in_background
+query("*")
+consulta
+touch("consulta")
+touch("* id:'consulta'")
+query("*")
+  def validar_texto(str)     wait_for_elements_exist(["* text:'#{str}'"], :timeout => 40)   end
+calabash-android run ApkProvaCarros.apk
+exit
+exit
+query("*")
+touch("consulta")
+touch("* id:'modelo'")
+exit
+reinstall_apps
+start_test_server_in_background
+query("*")
+touch("* text:'CONSULTA'")
+query("*")
+touch("* text:'Fiat'")
+exit
+reinstall_apps
+exit
+query("*")
+exit
+start_test_server_in_background
+query("*")
+query("*")
+query("*")
+exit
